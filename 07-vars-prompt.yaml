@@ -1,0 +1,16 @@
+- name: variables from prompt
+  hosts: localhost
+  namevars_prompt:
+  - name: USERNAME  
+    prompt: Please enter username
+    private: false # user can see what they are entering
+  - name: PASSWORD
+    prompt: Please enter your password
+    private: true # user can't see what they are entering
+  tasks:
+  - name: print ans check the values
+    ansible.builtin.debug:
+     msg: "username is :: {{USERNAME}}, Password is:: {{PASSWORD}}"
+
+
+#ansible-playbook -i inventory.ini -e ansible_user=centos -e ansible_password=DevOps321 07-vars-prompr.yaml

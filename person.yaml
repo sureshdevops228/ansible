@@ -1,0 +1,22 @@
+- name: suresh
+  dob: 03-03-2023
+  addess:
+   address-line1: vivek nagar
+   address-line2: sanath nagar
+   city: Hyd
+  email: test@gmail.com
+
+#Person1 have the fields & objects
+#Person2 have the fields & list of address
+
+- name: raj
+  dob: 03-04-2023
+  address:
+  - address-line1: vivek nagar1
+    address-line2: sanath nagar1
+    city: Hyd1
+
+  - address-line1: vivek nagar2
+    address-line2: sanath nagar2
+    city: Hyd2
+  email: test@gmail.com

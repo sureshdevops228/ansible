@@ -1,0 +1,13 @@
+# TASK level variables
+- name: variables from PALY level
+  hosts: localhost
+  vars:                  #declaring the variables
+    Course: "Devops"  #Key: value
+    Trainer: "Sivakumar"
+    Duration: "110HRS"
+  tasks:
+  - name: check variables
+    vars: #task level variables is override the paly level variable.
+      Course: "Devops with AWS"
+    ansible.builtin.debug:
+      msg: "Hi, I am learing {{Devops}}, Trainer is {{Trainer}}, Duration is {{Duration}}"

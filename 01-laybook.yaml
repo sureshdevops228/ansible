@@ -1,0 +1,18 @@
+- name: ping playbook
+  hosts: web
+  tasks:
+  - name: ping the server
+    ansible.builtin.ping:
+  
+# to ran the palybook command is : 
+#ansible-playbook -i inventory -e ansible_user=centos -e ansible_password=DevOps321 01-playbbok.yaml
+
+## this need to ran on the server ansible pulled path;
+
+#ansible -i inventory web --list-hosts
+#ansible -i inventory telephony --list-hosts
+#ansible -i inventory web&telephony --list-hosts
+#ansible -i inventory ungrouped --list-hosts
+#ansible -i inventory all --list-hosts
+
+

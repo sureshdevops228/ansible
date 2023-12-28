@@ -1,0 +1,9 @@
+# Variables reading from the file.
+- name: variables from PALY level
+  hosts: localhost
+  vars_files:              
+  - variables.yaml # Variables reading from the file. we can mention any no of files
+  tasks:
+  - name: check variables
+    ansible.builtin.debug:
+      msg: "Hi, I am learing {{Devops}}, Trainer is {{Trainer}}, Duration is {{Duration}}"
